@@ -169,12 +169,34 @@ function FadeIn({ children, delay = 0, style = {} }: { children: React.ReactNode
   );
 }
 
+function SlideIn({ children, delay = 0, from = "right", style = {} }: { children: React.ReactNode; delay?: number; from?: "right" | "left"; style?: React.CSSProperties }) {
+  const [on, setOn] = useState(false);
+  useEffect(() => { const t = setTimeout(() => setOn(true), delay); return () => clearTimeout(t); }, []);
+  const offset = from === "right" ? "60px" : "-60px";
+  return (
+    <div style={{
+      opacity: on ? 1 : 0,
+      transform: on ? "none" : `translateX(${offset})`,
+      transition: `opacity 1.1s cubic-bezier(0.16,1,0.3,1) ${delay}ms, transform 1.1s cubic-bezier(0.16,1,0.3,1) ${delay}ms`,
+      ...style
+    }}>
+      {children}
+    </div>
+  );
+}
+
 function SweepWord({ text, delay }: { text: string; delay: number }) {
   const [on, setOn] = useState(false);
   useEffect(() => { const t = setTimeout(() => setOn(true), delay); return () => clearTimeout(t); }, []);
   return (
     <span style={{ display: "inline-block", overflow: "hidden", verticalAlign: "bottom" }}>
-      <span style={{ display: "inline-block", transform: on ? "translateY(0)" : "translateY(108%)", opacity: on ? 1 : 0, transition: "transform 1s cubic-bezier(0.16,1,0.3,1), opacity 0.7s ease" }}>
+      <span style={{
+        display: "inline-block",
+        transform: on ? "translateY(0)" : "translateY(110%)",
+        opacity: on ? 1 : 0,
+        filter: on ? "blur(0px)" : "blur(4px)",
+        transition: "transform 1.05s cubic-bezier(0.16,1,0.3,1), opacity 0.6s ease, filter 0.8s ease"
+      }}>
         {text}
       </span>
     </span>
@@ -261,6 +283,12 @@ export default function Home() {
           .hero-grid{flex-direction:column!important}
           .hero-photo{width:100%!important;height:300px!important;margin-top:2.5rem}
         }
+        @keyframes borderShimmer {
+          0%   { box-shadow: 0 40px 100px rgba(0,0,0,0.55), 0 0 60px rgba(109,40,217,0.18), 0 0 0 1px rgba(168,139,250,0.08); }
+          50%  { box-shadow: 0 40px 100px rgba(0,0,0,0.55), 0 0 90px rgba(139,92,246,0.28), 0 0 0 1px rgba(168,139,250,0.18); }
+          100% { box-shadow: 0 40px 100px rgba(0,0,0,0.55), 0 0 60px rgba(109,40,217,0.18), 0 0 0 1px rgba(168,139,250,0.08); }
+        }
+        .hero-photo { animation: borderShimmer 5s ease-in-out infinite; }
       `}</style>
 
       <div style={{ minHeight: "100vh", background: "#08060f", color: "#fff", position: "relative" }}>
@@ -328,14 +356,17 @@ export default function Home() {
               </div>
 
               {/* Photo */}
-              <FadeIn delay={550} style={{ flexShrink: 0 }}>
-                <div className="hero-photo" style={{ width: 340, height: 430, borderRadius: 22, overflow: "hidden", position: "relative", border: "1px solid rgba(168,139,250,0.18)", boxShadow: "0 40px 100px rgba(0,0,0,0.55), 0 0 60px rgba(109,40,217,0.15)" }}>
-                  <div style={{ position: "absolute", inset: 0, zIndex: 2, borderRadius: 22, background: "linear-gradient(145deg, rgba(124,58,237,0.2) 0%, transparent 45%)", pointerEvents: "none" }} />
+              <SlideIn delay={300} from="right" style={{ flexShrink: 0 }}>
+                <div className="hero-photo" style={{ width: 340, height: 430, borderRadius: 22, overflow: "hidden", position: "relative", border: "1px solid rgba(168,139,250,0.22)", boxShadow: "0 40px 100px rgba(0,0,0,0.55), 0 0 80px rgba(109,40,217,0.22), 0 0 0 1px rgba(168,139,250,0.08)" }}>
+                  <div style={{ position: "absolute", inset: 0, zIndex: 2, borderRadius: 22, background: "linear-gradient(145deg, rgba(124,58,237,0.18) 0%, transparent 45%)", pointerEvents: "none" }} />
                   <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "38%", zIndex: 3, background: "linear-gradient(to top, rgba(8,6,15,0.72) 0%, transparent 100%)", pointerEvents: "none" }} />
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="/Samadrita_Roy_Photo.jpg" alt="Samadrita Roy Chowdhury" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top", display: "block", position: "relative", zIndex: 1 }} />
+                  <img src="/Samadrita_Roy_Photo.jpg" alt="Samadrita Roy Chowdhury" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top", display: "block", position: "relative", zIndex: 1, transition: "transform 0.6s cubic-bezier(0.16,1,0.3,1)" }}
+                    onMouseEnter={e => e.currentTarget.style.transform = "scale(1.03)"}
+                    onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
+                  />
                 </div>
-              </FadeIn>
+              </SlideIn>
 
             </div>
           </section>
