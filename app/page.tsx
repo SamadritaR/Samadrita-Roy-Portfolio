@@ -345,25 +345,25 @@ export default function Home() {
                   </h1>
                 </div>
 
-                <SlideIn delay={750} from="left" style={{ flexShrink: 0 }}>
-                  <p style={{ fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(216,196,255,0.9)", marginBottom: "1.4rem" }}>
+                <SlideIn delay={600} from="left">
+                  <p style={{ fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(216,196,255,0.9)", marginBottom: "1.4rem", whiteSpace: "nowrap" }}>
                     Product Manager &nbsp;·&nbsp; AI Systems &nbsp;·&nbsp; Business Analytics
                   </p>
                 </SlideIn>
 
-                <SlideIn delay={750} from="left" style={{ flexShrink: 0 }}>
+                <SlideIn delay={720} from="left">
                   <p style={{ fontSize: "1.05rem", lineHeight: 1.82, color: "rgba(255,255,255,0.78)", maxWidth: 500, marginBottom: "2.5rem" }}>
                     MS Business Analytics. Former DevOps Engineer and Senior analyst, now moving into product, with a technical range to understand the system and an analytical instinct to question it. Comfortable in the details, clear in the boardroom.
                   </p>
                 </SlideIn>
 
-               <SlideIn delay={750} from="left" style={{ flexShrink: 0 }}>
+                <SlideIn delay={830} from="left">
                   <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
                     <Btn href="#work" primary>View Work</Btn>
                     <Btn href="#contact">Get in Touch</Btn>
                     <Btn href="/Samadrita_Roy_Resume.pdf" external>Resume</Btn>
                   </div>
-               </SlideIn>
+                </SlideIn>
               </div>
 
               {/* Photo */}
