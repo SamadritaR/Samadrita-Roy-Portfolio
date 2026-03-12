@@ -1,3 +1,5 @@
+import Section from "../components/Section";
+import WorkCard from "../components/WorkCard";
 import Image from "next/image";
 
 export default function Home() {
