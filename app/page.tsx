@@ -351,13 +351,13 @@ export default function Home() {
                   </p>
                 </FadeIn>
 
-                <FadeIn delay={1050}>
+                <FadeIn delay={910}>
                   <p style={{ fontSize: "1.05rem", lineHeight: 1.82, color: "rgba(255,255,255,0.78)", maxWidth: 500, marginBottom: "2.5rem" }}>
                     MS Business Analytics. Former DevOps Engineer and Senior analyst, now moving into product, with a technical range to understand the system and an analytical instinct to question it. Comfortable in the details, clear in the boardroom.
                   </p>
                 </FadeIn>
 
-                <FadeIn delay={1180}>
+                <FadeIn delay={920}>
                   <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
                     <Btn href="#work" primary>View Work</Btn>
                     <Btn href="#contact">Get in Touch</Btn>
