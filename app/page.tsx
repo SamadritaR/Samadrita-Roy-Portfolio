@@ -102,7 +102,7 @@ const experience = [
 const impact = [
   { label: "Downtime Reduction", value: "60%", desc: "Automated VM recovery across 75 machines, Mercedes-Benz Global Ordering Platform" },
   { label: "Planning Efficiency", value: "25%", desc: "First-ever cross-product prioritization framework, adopted across 7+ KNEX product lines" },
-  { label: "Sprint Overruns Reduced", value: "70%", desc: "CI/CD and release workflow overhaul across GitLab, Jira and Confluence through API integration" },,
+  { label: "Sprint Overruns Reduced", value: "70%", desc: "CI/CD and release workflow overhaul across GitLab, Jira and Confluence at Capgemini" },
 ];
 
 const marks = [
@@ -314,7 +314,7 @@ export default function Home() {
 
                 <FadeIn delay={1050}>
                   <p style={{ fontSize: "1.05rem", lineHeight: 1.82, color: "rgba(255,255,255,0.78)", maxWidth: 500, marginBottom: "2.5rem" }}>
-                    MS Business Analytics. Former DevOps engineer and Senior analyst, now moving into product, with a technical range to understand the system and an analytical instinct to question it. Comfortable in the details, clear in the boardroom.
+                    MS Business Analytics. Former DevOps engineer and senior analyst, now moving into product, with the technical range to understand the system and the analytical instinct to question it. Comfortable in the details, clear in the boardroom.
                   </p>
                 </FadeIn>
 
@@ -421,7 +421,7 @@ export default function Home() {
           <section id="impact" style={{ paddingBottom: "5rem" }}>
             <SHead eyebrow="Proof" title="Impact by the Numbers" />
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(230px,1fr))", gap: "1.2rem" }}>
-              {impact.map((c, i) => (
+              {impact.map((c, i) => c && (
                 <Reveal key={c.label} delay={i * 60}>
                   <Card>
                     <p style={{ fontSize: 10, letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(196,168,255,0.75)", marginBottom: "1rem" }}>{c.label}</p>
