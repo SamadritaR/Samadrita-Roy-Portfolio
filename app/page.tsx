@@ -102,7 +102,7 @@ const experience = [
 const impact = [
   { label: "Downtime Reduction", value: "60%", desc: "Automated VM recovery across 75 machines, Mercedes-Benz Global Ordering Platform" },
   { label: "Planning Efficiency", value: "25%", desc: "First-ever cross-product prioritization framework, adopted across 7+ KNEX product lines" },
-  { label: "Sprint Overruns Reduced", value: "70%", desc: "CI/CD and release workflow overhaul across GitLab, Jira and Confluence at Capgemini" },
+  { label: "Sprint Overruns Reduced", value: "70%", desc: "CI/CD and release workflow overhaul across GitLab, Jira and Confluence by implementing API Integration" },
 ];
 
 const marks = [
