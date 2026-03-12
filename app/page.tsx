@@ -314,7 +314,7 @@ export default function Home() {
 
                 <FadeIn delay={1050}>
                   <p style={{ fontSize: "1.05rem", lineHeight: 1.82, color: "rgba(255,255,255,0.78)", maxWidth: 500, marginBottom: "2.5rem" }}>
-                    MS Business Analytics. Former DevOps engineer and senior analyst, now moving into product, with the technical range to understand the system and the analytical instinct to question it. Comfortable in the details, clear in the boardroom.
+                    MS Business Analytics. Former DevOps Engineer and Senior analyst, now moving into product, with a technical range to understand the system and an analytical instinct to question it. Comfortable in the details, clear in the boardroom.
                   </p>
                 </FadeIn>
 
