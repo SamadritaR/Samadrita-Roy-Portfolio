@@ -6,14 +6,14 @@ import { useEffect, useRef, useState } from "react";
 
 const selectedWork = [
   {
-    title: "Toxic Ingredients Indicator",
-    tag: "ML · NLP · Entrepreneurial · Consumer Product",
-    company: "Founder · Personal Project → Early-Stage Venture",
-    summary:
-      "Streamlit app that scans any cosmetic ingredient list and returns a toxicity verdict. Harmful compounds flagged with source-backed explanations (FDA, EWG, EU CosIng) and a risk score. Hybrid ML pipeline: TF-IDF baseline upgraded to DistilBERT for complex compounds, trained across High Concern, Moderate, and Safe categories with recall prioritized for safety-critical predictions. Full product loop owned: PRD, MoSCoW, usability testing with 10 peers. Now building the go-to-market.",
-    metrics: ["F1 = 0.88", "5 min → <30 sec", "Roadmap in progress"],
-    stack: "Python · DistilBERT · scikit-learn · spaCy · Streamlit · FDA/EWG Data · PRD",
-    link: "https://github.com/SamadritaR/Toxic-Ingredients-Indicator-for-Beauty-Products",
+  title: "Toxic Ingredients Indicator",
+  tag: "AI · OCR · Consumer Product · Entrepreneurial",
+  company: "Founder · MS Capstone → Early-Stage Venture",
+  summary:
+    "Streamlit app that scans cosmetic ingredient labels — via text, paste, or phone photo — and returns a hazard-tiered safety report. Built a curated SQLite database of 736 flagged ingredients across 30 chemical families and 5 severity tiers, sourced from EU CosIng, California AB 2762, IARC, and FDA. Implemented a dual-path OCR pipeline (Tesseract + OpenCV) with Gemini Vision fallback for dark or curved labels. Integrated Gemini 2.5 Flash for OCR error correction, plain-English per-ingredient explanations, and full product summaries. Full product loop owned: PRD, ESVF prioritization, MoSCoW bucketing, and usability testing with peers.",
+  metrics: ["736 ingredients flagged", "5 min → <30 sec", "Roadmap in progress"],
+  stack: "Python · Tesseract OCR · OpenCV · SQLite FTS5 · Gemini 2.5 Flash · Streamlit · EU CosIng · AB 2762 · IARC · FDA",
+  link: "https://github.com/SamadritaR/Toxic-Ingredients-Indicator-for-Beauty-Products",
   },
   {
     title: "Theaters vs. Streaming: What Predicts Success?",
