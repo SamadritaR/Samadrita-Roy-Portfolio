@@ -10,7 +10,7 @@ const selectedWork = [
   tag: "AI · OCR · Consumer Product · Entrepreneurial",
   company: "Founder · MS Capstone → Early-Stage Venture",
   summary:
-    "Streamlit app that scans cosmetic ingredient labels - via text, paste, or phone photo and returns a hazard-tiered safety report. Built a curated SQLite database of 736 flagged ingredients across 30 chemical families and 5 severity tiers, sourced from EU CosIng, California AB 2762, IARC, and FDA. Implemented a dual-path OCR pipeline (Tesseract + OpenCV) with Gemini Vision fallback for dark or curved labels. Integrated Gemini 2.5 Flash for OCR error correction, plain-English per-ingredient explanations, and full product summaries. Full product loop owned: PRD, ESVF prioritization, MoSCoW bucketing, and usability testing with peers.",
+    "Streamlit app that scans cosmetic ingredient labels - via text, paste, or phone photo and returns a hazard-tiered safety report. Built a curated SQLite database of 736 flagged ingredients across 30 chemical families and 5 severity tiers, sourced from EU CosIng, California AB 2762, IARC, and FDA. Implemented a dual-path OCR pipeline (Tesseract + OpenCV) with Gemini Vision fallback for dark or curved labels. Integrated Gemini 2.5 Flash for OCR error correction, plain-English per-ingredient explanations, and full product summaries.",
   metrics: ["736 ingredients flagged", "5 min → <30 sec", "Roadmap in progress"],
   stack: "Python · Tesseract OCR · OpenCV · SQLite FTS5 · Gemini 2.5 Flash · Streamlit · EU CosIng · AB 2762 · IARC · FDA",
   link: "https://github.com/SamadritaR/Toxic-Ingredients-Indicator-for-Beauty-Products",
